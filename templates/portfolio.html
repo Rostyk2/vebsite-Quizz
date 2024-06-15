@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/img_1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='profil.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Профіль</title>
+</head>
+<body>
+    <div class="blur-container">
+        <header>
+            <div class="user">
+            <i class='bx bx-user-circle'></i>
+            </div>
+            <div class="user-info">
+                <h1>Вітаю:{{username}}</h1>
+                <h2>{{username}}</h2>
+                <section>
+                <div class="plus">
+                <p>Це ваш профіль.Тут ви можете подивитись свої результати з квізів подивитися скільки ви зробили правильних відповідей і багато чого цікавого<i class='bx bx-message-rounded-add' id="plus-icon"></i></p>
+                </div>
+                </section>
+                <section>
+                <p>Ви можете змінити вашу картинку на аватарці на якусь іншу для цього вам треба мати завантажену картинку і після цього клікнути на іконку.Ізнайти вашу завантажену картинку і поставити її на аватарку в своєму профілі.</p>
+                </section>
+                <div id="feedback-container" style="display: none;">
+                    <textarea id="feedback" rows="4" placeholder="Тут ви можете написати нагадування або щось інше..."></textarea>
+                    <button id="submit-feedback">Відправити</button>
+                </div>
+            </div>
+        </header>
+
+    </div>
+    <script>
+        document.getElementById('plus-icon').addEventListener('click', function() {
+            var feedbackContainer = document.getElementById('feedback-container');
+            if (feedbackContainer.style.display === 'none') {
+                feedbackContainer.style.display = 'block';
+            } else {
+                feedbackContainer.style.display = 'none';
+            }
+        });
+
+        document.getElementById('submit-feedback').addEventListener('click', function() {
+            var feedbackContainer = document.getElementById('feedback-container');
+            feedbackContainer.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

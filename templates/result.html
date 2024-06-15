@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/img_1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result111111.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Результат</title>
+</head>
+<body>
+    <div class="blur-container">
+<h1>Ви зробили:<br>{{true_answer}}<br> правильних відповіді</h1>
+        <p>Це дуже хороший результат.Я коли попробував цей квіз набрав тільки 2 бали<i class='bx bx-message-rounded-add' id="plus-icon"></i></p>
+<div id="feedback-container" style="display: none;">
+    <textarea id="feedback" rows="4" placeholder="Напишіть свої враження про квіз..."></textarea>
+    <button id="submit-feedback">Відправити</button>
+</div>
+    </div>
+
+<script>
+    document.getElementById('plus-icon').addEventListener('click', function() {
+        var feedbackContainer = document.getElementById('feedback-container');
+        if (feedbackContainer.style.display === 'none') {
+            feedbackContainer.style.display = 'block';
+        } else {
+            feedbackContainer.style.display = 'none';
+        }
+    });
+
+    document.getElementById('submit-feedback').addEventListener('click', function() {
+        var feedbackContainer = document.getElementById('feedback-container');
+        feedbackContainer.style.display = 'none';
+    });
+</script>
+</body>
+</html>

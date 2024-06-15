@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/img_1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stile.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="general">
+        <h1>Зареєструватися</h1>
+        <form action="/register" method="POST">
+            <div class="input-box">
+                <input type="text" name="username" maxlength="20" placeholder="Ваше ім'я" required>
+                <i class='bx bx-user-circle' ></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" maxlength="8" placeholder="Пароль" required>
+                <i class='bx bx-lock'></i>
+            </div>
+            <!-- <div class="input-box">
+                <select name="stat" required>
+                    <option value="">Виберіть стать</option>
+                    <option value="male">Чоловіча</option>
+                    <option value="female">Жіноча</option>
+                </select>
+            </div> -->
+            <div class="remembers">
+                <label>
+                    <input type="checkbox">
+                    <span>Запам'ятати пароль</span>
+                </label>
+                <a href="#">Забули пароль?</a>
+            </div>
+            <form action="/new_page" method="POST">
+            <button type="submit" class="btn">Зареєструватися</button>
+            </form>
+        </form>
+        <div class="register-link">
+            <p>Немаєте акаунту? <a href="#">Війти</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/img_1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stile_2.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="info-box"></div>
+        <div class="user-container">
+            <div class="circle" onclick="toggleCircle()">
+                <div class="catalog">
+                    <i class='bx bx-user'></i>
+                </div>
+            </div>
+            <p id="username" class="username"><a href="{{ url_for('portfolio') }}" target="_blank">{{username}}</a></p>
+        </div>
+        <div class="choose">
+        <select name="different" id="backgroundSelector" onchange="changeBackground()">
+            <option value="nature">Природа України</option>
+            <option value="people">Люди України</option>
+            <option value="monuments">Пам'ятки України</option>
+        </select>
+        </div>
+        <div class="logotip">
+            <h1 class="logo">Quiz</h1>
+        </div>
+        <div class="mmenu" onclick="toggleMenu()">
+            <i class='bx bx-menu'></i>
+        </div>
+        <div class="menu">
+            <div class="title">
+                <h1>Меню</h1>
+            </div>
+            <div class="list_menu">
+                <ul>
+                    <li><a href="{{ url_for('rules') }}" target="_blank">Правила гри</a></li>
+                    <li><a href="{{ url_for('information') }}" target="_blank">Інформація</a></li>
+                    <li><a href="{{ url_for('settings') }}" target="_blank">Налаштування</a></li>
+                </ul>
+                <div class="footer_menu">
+                    <p>Quiz-розвиває логіку</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="table_quizz">
+{%for element in quizzes%}
+<h1><b>{{element[1]}}</b> </h1>
+        <div class="table_p">
+<p><b>{{element[2]}}</b> </p>
+        </div>
+        <div class="table_button">
+    <a  href="{{ url_for('start_quizz', quizz_id=element[0]) }}"> Перейти</a>
+        </div>
+{%endfor%}
+</div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            var mmenu = document.querySelector('.mmenu');
+            menu.classList.toggle('open');
+            mmenu.classList.toggle('rotate');
+        }
+
+        function toggleCircle() {
+            var circle = document.querySelector('.circle');
+            var username = document.getElementById('username');
+            circle.classList.toggle('active');
+            username.classList.toggle('show');
+        }
+
+        function changeBackground() {
+            var selector = document.getElementById('backgroundSelector');
+            var selectedValue = selector.value;
+            var body = document.body;
+
+            switch(selectedValue) {
+                case 'nature':
+                    body.style.backgroundImage = "url('{{ url_for('static', filename='img/img_11.png')}}')";
+                    break;
+                case 'people':
+                    body.style.backgroundImage = "url('{{ url_for('static', filename='img/img_12.png')}}')";
+                    break;
+                case 'monuments':
+                    body.style.backgroundImage = "url('{{ url_for('static', filename='img/img_9.png')}}')";
+                    break;
+                default:
+                    body.style.backgroundImage = "url('{{ url_for('static', filename='img/img_11.png')}}')";
+            }
+        }
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

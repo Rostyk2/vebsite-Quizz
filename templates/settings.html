@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/img_1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='settings.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Налаштування</title>
+</head>
+<body>
+    <div class="blur-container">
+        <header>
+            <div class="general_logo">
+                <p>Налаштування Quiz</p>
+            </div>
+        </header>
+        <main>
+            <section>
+                <h2>Тут ми зможемо відповісти на ваші питання</h2>
+                <div class="plus">
+                    <p>Якщо у вас виникли якісь питання або ви хочете сказати свою думку про цей сайт, ви зможете це зробити. Якщо ви побачили якісь помилки в сайті, теж пишіть <i class='bx bx-message-rounded-add' id="plus-icon"></i></p>
+                </div>
+                <div id="feedback-container" style="display: none;">
+                    <textarea id="feedback" rows="4" placeholder="Напишіть ваші коментарі тут..."></textarea>
+                    <button id="submit-feedback">Відправити</button>
+                </div>
+            </section>
+            <section>
+                <h2>Створення Quiz </h2>
+                <p>Цей веб додаток повністю створювався на платформі PyCharm.Цей сайт був сворений завдяки трьох мов програмування а саме HTML ,CSS і трохи JavaScript.Якщо ви захочете звязатися зі мною то нижче буде мій номер телефону. </p>
+                <h1>-0730331521</h1>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('plus-icon').addEventListener('click', function() {
+            var feedbackContainer = document.getElementById('feedback-container');
+            if (feedbackContainer.style.display === 'none') {
+                feedbackContainer.style.display = 'block';
+            } else {
+                feedbackContainer.style.display = 'none';
+            }
+        });
+
+        document.getElementById('submit-feedback').addEventListener('click', function() {
+            var feedbackContainer = document.getElementById('feedback-container');
+            feedbackContainer.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/img_1.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='question_page.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Quizz-триває</title>
+</head>
+<body>
+    <form action="{{ url_for('answer_func', quizz_id=quizz_id) }}" method="post">
+        <div class="question">
+           <p>{{ question[2] }}</p>
+        </div>
+        <div class="form-group">
+            <div class="rectangle blur-container_1">
+                <div>
+                    <input type="radio" id="option1" name="answer" value="{{ answers[0][3] }}">
+                    <label class="color1" for="option1">{{ answers[0][2] }}</label>
+                </div>
+            </div>
+            <div class="rectangle blur-container_2">
+                <div>
+                    <input type="radio" id="option2" name="answer" value="{{ answers[1][3] }}">
+                    <label class="color" for="option2">{{ answers[1][2] }}</label>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" name="question_id" value="{{ question[0] }}">
+        <div class="btn-container">
+            <button class="btn" type="submit">Продовжити</button>
+        </div>
+    </form>
+</body>
+</html>
