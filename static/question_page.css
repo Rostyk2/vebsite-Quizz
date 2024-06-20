@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('img/img_13.png');
+    background-size: cover;
+    background-position: center;
+    font-family: "Georgia", Serif;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+form p {
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    transform: translateY(59.5%);
+}
+
+.rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 340px;
+}
+
+
+.blur-container_1{
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    bottom:0;
+    right: 0;
+    min-height: 300px;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.blur-container_2{
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    bottom:0;
+    right: 0;
+    min-height: 300px;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.btn-container {
+    background::#fff;
+    position: absolute;
+    bottom: -412px;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background:#fff;
+    color:black;
+    z-index: 100;
+}
+
+.pro{
+font-size:100px;
+    height:-100px;
+}
+
+.color{
+    color:#fff;
+    font-size:40px;
+}
+
+.color1{
+    color:#fff;
+    font-size:40px;
+}
+
+.question p{
+    background:linear-gradient(70deg, red, orange, yellow);
+}

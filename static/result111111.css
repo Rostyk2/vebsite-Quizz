@@ -1,0 +1,57 @@
+.blur-container {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background-image: url('img/img_10.png');
+    background-size: cover;
+    background-position: center;
+    font-family: "Georgia",Serif;
+}
+
+h1{
+    color:white;
+    font-size:30px;
+}
+
+p{
+    color:white;
+    font-size:18px;
+}
+
+#feedback-container {
+    margin-top: 20px;
+}
+
+#feedback {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#submit-feedback {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#submit-feedback:hover {
+    background-color: #45a049;
+}

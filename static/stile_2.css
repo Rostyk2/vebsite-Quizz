@@ -1,0 +1,223 @@
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('img/img_11.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.user-container {
+    position: relative;
+    top: -4px;
+    left: 1750px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease, left 0.5s ease;
+}
+
+.circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color:  #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, left 0.5s ease;
+    cursor: pointer;
+}
+
+.catalog {
+    color: #333;
+    font-size: 24px;
+}
+
+.circle.active {
+    transform: translateX(-150px);
+}
+
+.username a {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #fff;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.list_menu a:hover {
+    color: #f0ffff;
+}
+
+#username {
+    display: none;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: -120px;
+    transition: opacity 0.5s ease;
+    margin-top: 14px;
+}
+
+#username.show {
+    display: block;
+    opacity: 1;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 1700px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.editable-window {
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none;
+    font-family: Arial, sans-serif;
+}
+
+.title h1 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.list_menu a {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 25px;
+    color: #fff;
+    padding-left: 5px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.list_menu a:hover {
+    border-left: 2px solid #f0ffff;
+    padding-left: 10px;
+    transition: all 0.2s ease;
+}
+
+.list_menu {
+    margin-bottom: 50px;
+}
+
+.list_menu li {
+    margin: 25px 0;
+}
+
+.menu {
+    padding: 25vh 50px;
+    position: fixed;
+    background: rgba(20, 20, 2, 0.5);
+    height: 100%;
+    backdrop-filter: blur(100px);
+    border-right: 7px solid #f0ffff;
+    border-top: 7px solid #f0ffff;
+    border-bottom: 7px solid #f0ffff;
+    left: -370px;
+    transition: all 0.2s ease;
+}
+
+.mmenu.rotate {
+    transform: rotate(90deg);
+}
+
+.menu.open {
+    left: 0;
+}
+
+.footer_menu {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+    color: #fff;
+    height: 70px;
+}
+
+.mmenu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.mmenu i {
+    font-size: 50px;
+}
+
+.footer_menu p {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+    color: #fff;
+}
+
+.choose select {
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+.choose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.table_quizz{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+h1 {
+    color: #f0ffff;
+    text-align: center;
+}
+
+.table_p{
+    line-height: 1.5;
+    color: #f0ffff;
+}
+
+.table_button{
+    width:100%;
+    height:45px;
+    background:#fff;
+    border:none;
+    outline:none;
+    border:2px solid rgb(255,255,255, .2);
+    border-radius:40px;
+    font-size:16px;
+    color:black;
+    font-weight:600;
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}
